@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>edit</title>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+            a { text-decoration:none } 
+         </style>
+    </head> 
+    <body style="background-color: lightgray; margin: 0;">
+
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                        <br>
+                        <h1>Competition</h1>
+                        <br>
+            </div>
+            <div style="background-color: white;  margin:30px;  padding:30px;">
+                    <div>
+                        <div>
+                            <h1>Edit Competition</h1>
+                            <hr><br>
+                        </div>
+                            <form action="/competition/<%=post.seq%>/edit" method="POST">
+                                <h3> Competition </h3>
+                                <input type="text" name="comp_name" value="<%= post.comp_name %>">
+                                <br><br>
+                                <h3> Organization </h3>
+                                <input type="text" name="comp_org" value="<%= post.comp_org %>">
+                                <br><br>
+                                <h3> Win (yes:1 / no:0) </h3>
+                                <input type="text" name="awards_check" value="<%= post.awards_check %>">
+                                <br><br>
+                                <h3> Awards (if "Win" is 1) </h3>
+                                <input type="text" name="awards_name">
+                                <br><br>
+                                <h3> Related Project (yes:1 / no:0) </h3>
+                                <input type="text" name="proj_check" value="<%= post.proj_check %>">
+                                <br><br>
+                                <h3> Name of Project (if "Related Project" is 1 ) </h3>
+                                <input type="text" name="proj_name">
+                                <br><br>
+                                <h3> Your ID </h3>
+                                Please enter your ID again to confirm <br>
+                                <input type="text" name="user_id">
+                                <br><br>
+                                <div style="text-align: center;">
+                                    <a href=> <input type="submit" value="save"> </a>
+                                </div>
+                               
+                            </form>
+                        </div>
+            </div>
+           
+        <div style="text-align: center;">
+                <a href='/competition'> <input type="button" value="return"> </a>
+        </div>
+    </body>
+</html>

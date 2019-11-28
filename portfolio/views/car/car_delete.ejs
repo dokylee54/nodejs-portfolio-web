@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Remove</title>
+    </head>
+    <body style="background-color: lightgray; margin: 0;">
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                    <br>
+                    <h1>Career</h1>
+                    <br>
+                </div>
+              <div style="background-color: white; margin:30px; padding: 30px;">
+                    <div style="text-align:center">
+
+                            <div style="text-align: center;">
+                                    <h1> Remove Career</h1>
+                                    <hr>
+                                    <br>
+                                    <h3><%= post.org_name %> - really remove?</h3>
+                                    <br>
+                                    <br>
+                                    <form action="/career/<%= post.seq %>/delete" method="post">
+                                        <input type="submit" value="YES">
+                                        <a href="/career/<%= post.seq %>"><input type="button" value="NO"> </a>
+                                    </form>
+                                </div>
+                      </div>  
+                            
+            </div>
+
+    
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>career</title> 
+        <script type="text/javascript" src="app.js"></script>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+            a { text-decoration:none } 
+         </style>
+    </head>
+    <body style="background-color: lightgray; margin:0;">
+        <div style=" background-color: #29487D; color:white; text-align: center;">
+            <br>
+            <h1>Career</h1>
+            <br>
+        </div>
+        <div>
+            <br><br>
+        </div>
+        <div style="background-color: white;  margin:30px">
+            <div style="padding: 30px;">
+                    <h2>Name of Career</h2>
+                    Press the career name to go to the detailed view.
+                    <br><br>
+                    <hr>
+                   <br><br>
+            </div>
+
+        <ul>
+            <% for (let i=0 ; i < posts.length ; i++) { %>
+            <p> 
+                <a href='/career/<%= posts[i].seq %>'> <h3><b>> <%= JSON.stringify(posts[i].org_name) %></b></h3></a>
+            </p>
+            <p>
+                    <%= JSON.stringify(posts[i].start_date) %> - <%= JSON.stringify(posts[i].end_date) %>
+            </p>
+            <br>
+            <%}%>
+        </ul>
+        </div>
+        <div style="text-align: center;">
+            <p>
+                    <a href="/career/add"><input type="button" value="add career"></a>
+                    <a href='../main'> <input type="button" value="main"> </a>
+            </p>
+        </div>
+    </body>
+</html>

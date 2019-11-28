@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>competition</title> 
+        <script type="text/javascript" src="app.js"></script>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+         </style>
+    </head>
+    <body style="background-color: lightgray; margin: 0;">
+
+        <div style=" background-color: #29487D; color:white; text-align: center;">
+                    <br>
+                    <h1>Competition</h1>
+                    <br>
+        </div>
+        <div style="background-color: white;  margin:30px  style=">
+                <div style="padding:30px">
+                        <h2>Name of Competiton</h2>
+                        Press the competition name to go to the detailed view.
+                        <br><br>
+                        <hr>
+                        <br><br>
+                        <% for (let i=0 ; i < posts.length ; i++) { %>
+                        <p> 
+                            <a href='/competition/<%= posts[i].seq %>'> <h3><b>> <%= JSON.stringify(posts[i].comp_name) %></b></h3></a>
+                        </p>
+                        <br>
+                        <%}%>
+                    </div></div>
+
+        <div style="text-align: center;">
+            <p>
+                <a href="/competition/add"><input type="button" value="add"></a>
+                <a href='../main'> <input type="button" value="main"> </a>
+            </p>
+        </div>
+    </body>
+</html>

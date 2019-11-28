@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Add Competition</title>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+            a { text-decoration:none } 
+         </style>
+    </head>
+    <body style="background-color: lightgray; margin: 0;">
+        <div style=" background-color: #29487D; color:white; text-align: center;">
+                    <br>
+                    <h1>Competition</h1>
+                    <br>
+        </div>
+        <div style="background-color: white; margin:30px; padding: 30px;">
+            <div style="padding:30px">
+                    <div>
+                            <h1>Add Competition</h1>
+                            
+                            <hr>
+                            <br>
+                    </div>
+                    <div>
+                        <form action="/competition/add" method="post">
+                            <h3> Name of Competition </h3>
+                            <input type="text" name="comp_name">
+                            <br><br>
+                            <h3> Organizer </h3>
+                            <input type="text" name="comp_org">
+                            <br><br>
+                            <h3> Win (yes:1 / no:0) </h3>
+                            <input type="text" name="awards_check">
+                            <br><br>
+                            <h3> Awards (if "Win" is 1) </h3>
+                            <input type="text" name="awards_name" value="if none, blank">
+                            <br><br>
+                            <h3> Related Project (yes:1 / no:0) </h3>
+                            <input type="text" name="proj_check">
+                            <br><br>
+                            <h3> Name of Project (if "Related Project" is 1 ) </h3>
+                            <input type="text" name="proj_name" value="if none, blank">
+                            <br><br>
+                            <h3> Your ID </h4>
+                            Please enter your ID again to confirm <br>
+                            <input type="text" name="user_id">
+                            <br><br><br>
+                            <div style="text-align: center;">
+                                    <a href=> <input type="submit" value="save"> </a>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+       
+        <div style="text-align: center;">
+
+                <a href='/competition'> <input type="button" value="return"> </a>
+        </div>
+    </body>
+</html>

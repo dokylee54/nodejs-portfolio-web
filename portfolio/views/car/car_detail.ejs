@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>career detail</title> 
+        <script type="text/javascript" src="app.js"></script>
+        <style>
+            a { text-decoration:none } 
+        </style>
+    </head>
+    <body style="background-color: lightgray; margin:0;">
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                    <br>
+                    <h1>Career</h1>
+                    <br>
+                </div>
+        <div style="background-color: white;  margin:30px">
+            <div style="padding: 30px;">
+                    <h1>Career Dedtail</h1>
+                    <hr>
+                    <br>
+                <ul>
+                    <p> 
+                        <br>
+                        <h3>> Organization</h3>
+                        <%= JSON.stringify(post.org_name) %><br><br><br>
+                        <h3>> Start</h3>
+                        <%= JSON.stringify(post.start_date) %><br><br><br>
+                        
+                        <h3>> End</h3>
+                        <%= JSON.stringify(post.end_date) %><br><br><br>
+                        
+                        <h3>> Description</h3>
+                        <%= JSON.stringify(post.career_description) %><br><br><br>
+                        
+                    </p>
+                </ul>
+            </div>
+
+        </div>
+        <div style="text-align: center;">
+            <a href='/career/ <%= post.seq %>/delete'> <input type="button" value="remove"> </a>
+            <a href='/career/<%= post.seq %>/edit'> <input type="button" value="edit"> </a>
+            <a href='../main'> <input type="button" value="main"> </a>
+        </div>
+    </body>
+</html>

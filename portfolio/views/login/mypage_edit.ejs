@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<style>
+    table {
+      width: 100%;
+    }
+</style>
+<html>
+    <head>
+        <title>EDIT PROFILE</title>
+    </head>
+    <body style="background-color: lightgray;">
+        <h1 style="text-align: center;"><b>EDIT PROFILE</b></h1>
+        <hr>
+        <form action="/profile/<%= user_id %>/edit" method="POST" style="text-align: center;">
+            <div style="text-align: center;">
+                    <div style="display:inline-block; font-size:20px; margin:0 auto;">
+                        <table>
+                            <tr><th><h3><%= user_id %>'s profile</h3></th></tr>
+                            <tr><td><input type="password" name="password" placeholder="enter your password..." size="80"></td></tr>
+                            <tr><td><input type="text" name="birth" placeholder="enter birth date... (e.g. 960504)" size="80"></td></tr>
+                            <tr><td><input type="text" name="email" value="<%= post['email'] %>" size="80"></td></tr>
+                            <tr><td><input type="text" name="phone" value="<%= post['phone'] %>" size="80"></td></tr>
+                            <tr><td><input type="text" name="address" value="<%= post['address'] %>" size="80"></td></tr>
+                        </table>
+                        <input type="submit" value="SAVE">
+                        <a href="/main"><input type="button" value="BACK"></a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

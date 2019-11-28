@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>edit</title>
+    </head>
+    <body style="background-color: lightgray; margin: 0;">
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                    <br>
+                    <h1>Career</h1>
+                    <br>
+                </div>
+        <div  style="background-color: white; margin:30px; padding: 30px;">
+                <div>
+                        <h1>Edit Career</h1>
+                        <br>
+                </div>
+                <div>
+                    <form action="/career/<%=post.seq%>/edit" method="POST">
+                        <h3> Organization </h3>
+                        <input type="text" name="org_name" value="<%= post.org_name %>"><br>
+                        <br>
+                        <h3> Start</h3>
+                        <input type="text" name="start_date" value="<%= post.start_date %>"><br>
+                        <br>
+                        <h3> End </h3>
+                        <input type="text" name="end_date" value="<%= post.end_date %>"><br>
+                        <br>
+                        <h3> Description </h3>
+                        <input type="text" name="career_description" value="<%= post.career_description %>"><br>
+                        <br>
+                        <h3> Your ID </h3>
+                         Please enter your ID again to confirm <br>
+                        <input type="text" name="user_id"><br>
+                        <br><br><br>
+                        <div style="text-align: center;">
+                                <a href=> <input type="submit" value="save"> </a>
+                        </div>
+                       
+                    </form>
+                </div>
+        </div>
+
+        <div style="text-align: center;">
+                <a href='/career'> <input type="button" value="return"> </a>
+        </div>
+    </body>
+</html>

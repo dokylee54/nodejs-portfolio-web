@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>add test</title>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+            a { text-decoration:none } 
+         </style>
+    </head>
+    <body style="background-color: lightgray;">
+        <div>
+                <h2>시험 추가</h2>
+        </div>
+        <div>
+            <form action="/test/add" method="post">
+                <h4> 시험 이름 </h4>
+                <input type="text" name="test_name">
+                <br>
+                <h4> 점수 or 등급 </h4>
+                <input type="text" name="score">
+                <br>
+                <h4> 시험 주최 기관 </h4>
+                <input type="text" name="issuing_org">
+                <br>
+                <h4> 점수 공지 일자 </h4>
+                <input type="text" name="issuing_date" value="(ex. 970322)">
+                <br>
+                <h4> 점수 만료 일자 (영구적일 경우 비워두세요) </h4>
+                <input type="text" name="expiration_date" value="(ex. 970322)">
+                <br>
+                <h4> 작성자 id </h4>
+                - 확인을 위하여 본인의 아이디를 한번 더 입력해주세요 <br>
+                <input type="text" name="user_id">
+                <br><br>
+                <input type="submit" value="글 추가">
+            </form>
+        </div>
+        <div style="text-align: center;">
+
+                <a href='/test'> <input type="button" value="목록으로 돌아가기"> </a>
+        </div>
+    </body>
+</html>

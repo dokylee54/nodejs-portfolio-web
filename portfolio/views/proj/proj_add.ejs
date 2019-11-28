@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Project</title>
+    </head>
+    <body style="background-color: lightgray; margin:0;">
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                <br>
+                <h1>Project</h1>
+                <br>
+            </div>
+            <div>
+                <br><br>
+            </div>
+            <div style="background-color: white;  margin:30px; padding: 30px;">
+                    <div>
+                            <h1>Add Project</h1>
+                            <hr>
+                            <br>
+                            <form action="/project/add" method="post">
+                                <h3> Project </h3>
+                                <input type="text" name="proj_name">
+                                <br>
+                                <h3> Description </h3>
+                                <input type="text" name="proj_description" style="width:100px;">
+                                <br>
+                                <h3> Related URL </h3>
+                                <input type="text" name="url" value="ex. github address">
+                                <br>
+                                <h3> Your ID </h3>
+                                Please enter your ID again to confirm <br>
+                                <input type="text" name="user_id">
+                                <br><br>
+                                <div style="text-align: center;">
+                                        <input type="submit" value="Add">
+                                </div>
+                               
+                            </form>
+                        </div>
+                    
+            </div>
+          <div style="text-align: center;">
+
+                <a href='/project'> <input type="button" value="Return"> </a>
+        </div>
+    </body>
+</html>

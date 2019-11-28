@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<style>
+    table {
+      width: 100%;
+      border: 1px solid #444444;
+    }
+</style>
+<html>
+    <head>
+        <title>my profile</title>
+    </head>
+    <body style="background-color: lightgray; text-align: center; margin: 0;">
+        <div style=" padding:10px; background-color: #29487D; margin:0; color:white;">
+            <h1 style="text-align: center;"><b>MY PROFILE</b></h1>
+        </div>
+        <br>
+
+        <div style="background-color: white;  margin:30px; padding:30px;">
+            <div name="header">
+                <h1><%= user_id %> 's profile</h1>
+            </div>
+            <br>
+            <div name="table" style="padding:10px;">
+                <table>
+                    <tr><td><br><br></td></tr>
+                    <tr><td><h3>birth</h3></td></tr>
+                    <tr><td><%= post['birth'] %></td></tr> 
+                    <tr><td><h3>e-mail</h3></td></tr>
+                    <tr><td><%= post['email'] %></td></tr>
+                    <tr><td><h3>phone</h3></td></tr>
+                    <tr><td><%= post['phone'] %></td></tr>
+                    <tr><td><h3>address</h3></td></tr>
+                    <tr><td><%= post['address'] %></td></tr>
+                    <tr><td><br><br></td></tr>
+                </table>
+            </div>
+            <br><br>
+        </div>
+       
+
+
+        <div name="body">
+            <form action="/profile/<%= user_id %>/edit" method="GET">
+                <button type="submit" style="width:150px;">edit</button>        
+            </form>
+             <form action="/profile/<%= user_id %>/deleteAcount" method="GET">
+                  <button type="submit" style="width:150px;">remove</button>        
+            </form>
+            <a href="/main"><input type="button" value="main" style="width:150px;"></a>
+        </div>     
+        <br><br>   
+    </body>
+</html>

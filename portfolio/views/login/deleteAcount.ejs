@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Delete Account</title>
+    </head>
+    <body style="background-color: lightgray;">
+        <div style="text-align: center;">
+            <h2>계정 삭제</h2>
+            <hr>
+        </div>
+        <div style="text-align: center;">
+            <br>
+            <h2><%= user_id %> 계정을 정말 삭제하실건가요?</h2>
+            <br>
+            <br>
+            <form action="/profile/<%= user_id %>/deleteAcount" method="post">
+                <input type="submit" value="YES">
+                <a href="/main"><input type="button" value="NO"> </a>
+            </form>
+        </div>
+    </body>
+</html>

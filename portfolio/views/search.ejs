@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<style type="text/css">
+    a:link { color:white; text-decoration: none;}
+    a:visited { color:white; text-decoration: none;}
+    a:hover { color: skyblue; text-decoration: underline;}
+</style>
+<html>
+    <head>
+        <title><%= searchBoard %> : Search Results</title>
+    </head>
+    <body style="background-color: lightgray;margin:0;">
+        <div style="padding:10px; background-color: #29487D; color:white;">
+            <div style="text-align:center;" >
+                    <h1 style="font-size: 50px"><b>My Portfolio</b></h1>
+            </div>
+            <div style="text-align:center;">
+                <a href="/profile" style="text-decoration: none"> <b>profile</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/resume" style="text-decoration: none"> <b>resume</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/competition" style="text-decoration: none"> <b>competition</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/project" style="text-decoration: none"> <b>project</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/certification" style="text-decoration: none"> <b>certification</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/test" style="text-decoration: none"> <b>test</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/career" style="text-decoration: none"> <b>career</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div style="background-color: white;  margin:30px; padding:30px;">
+                <div style="text-align: center;">
+                        <h1><b>Search Results</b></h1>
+                        <br><hr><br>
+                        <h1><b>'<%= searchBoard %>' </b></h1>
+                        <br><br>
+                </div>
+                <table border="1" style="background-color: white; border-collapse:collapse; width: 1000px;">
+                        <% for(var i =0;i < results.length; i++){ %>
+                            <tr>
+                            <% for(var key in results[i]){ %>
+                                <td><%= results[i][key] %></td>  
+                            <% } %>
+                            </tr>
+                        <% } %>
+                    </table>
+                    <br><br>
+        </div>
+      
+        <br><br>
+        <div style = "text-align: center;">
+            <a href='/main'><button type="submit">Main</button></a>
+        </div>
+    </body>
+</html>

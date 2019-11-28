@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>add career</title>
+        <style type="text/css">
+                a:link { color:black; text-decoration: none;}
+                a:visited { color:black; text-decoration: none;}
+                a:hover { color:#29487D; text-decoration: underline;}
+             </style>
+    </head>
+    <body style="background-color: lightgray; margin: 0;">
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                    <br>
+                    <h1>Career</h1>
+                    <br>
+                </div>
+        <div style="background-color: white; margin:30px; padding: 30px;">
+                <div>
+                        <h1>Add Career</h1>
+                </div>
+                <div>
+                    <form action="/career/add" method="post">
+                        <h4> Organization </h4>
+                        <input type="text" name="org_name">
+                        <br>
+                        <h4> Start </h4>
+                        <input type="text" name="start_date" value="(ex. 970322)">
+                        <br>
+                        <h4> End </h4>
+                        <input type="text" name="end_date" value="(ex. 970322)">
+                        <br>
+                        <h4> Description </h4>
+                        <input type="text" name="career_description">
+                        <br>
+                        <h4> Your ID </h4>
+                        Please enter your ID again to confirm <br>
+                        <input type="text" name="user_id">
+                        <br><br><br>
+                        <div style=" text-align: center;">
+                                <input type="submit" value="add">
+                        </div>
+                    
+                    </form>
+                </div>
+        </div>
+        
+        <div style="text-align: center;">
+
+                <a href='/career'> <input type="button" value="return"> </a>
+        </div>
+    </body>
+</html>

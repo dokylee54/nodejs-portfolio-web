@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Remove Project</title>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+            a { text-decoration:none } 
+         </style>
+    </head>
+    <body style="background-color: lightgray; margin:0;">
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                <br>
+                <h1>Project</h1>
+                <br>
+            </div>
+            <div>
+                <br><br>
+            </div>
+            <div style="background-color: white;  margin:30px; padding: 30px;">
+                    <div style="text-align: center;">
+                        <h1>Remove Project</h1>
+                            <hr>
+                            <br>
+                           <h3> <%= post.proj_name %> - really remove?</h3>
+                            <br>
+                            <br>
+                            <form action="/project/<%= post.seq %>/delete" method="post">
+                                <input type="submit" value="YES">
+                                <a href="/project/<%= post.seq %>"><input type="button" value="NO"> </a>
+                            </form>
+                        </div>
+            </div>
+ 
+    </body>
+</html>

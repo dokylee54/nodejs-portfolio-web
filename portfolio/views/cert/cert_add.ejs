@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Certification</title>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+         </style>
+    </head>
+    <body style="background-color: lightgray; margin: 0;">
+
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                    <br>
+                    <h1>Certification</h1>
+                    <br>
+        </div>
+
+        <div style="background-color: white;  margin:30px">
+            <div style="padding:30px">
+                    <div>
+                            <h1>Add Certification</h1>
+                            <br>
+                            <hr>
+                            <br>
+                    </div>
+                    <div>
+                        <form action="/certification/add" method="post">
+                            <h4> Name of Certification </h4>
+                            <input type="text" name="cert_name">
+                            <br>
+                            <h4> Number of Certification </h4>
+                            <input type="text" name="cert_num">
+                            <br>
+                            <h4> Issuing Org </h4>
+                            <input type="text" name="issuing_org">
+                            <br>
+                            <h4> Issuing </h4>
+                            <input type="text" name="issuing_date" value="(ex. 970322)">
+                            <br>
+                            <h4> Expiration (Enter 000000 if none ) </h4>
+                            <input type="text" name="expiration_date" value="(ex. 970322)">
+                            <br>
+                            <h4> Your ID </h4>
+                            Please enter your ID again to confirm <br>
+                            <input type="text" name="user_id">
+                            <br><br>
+                            <input type="submit" value="add">
+                        </form>
+                    </div>
+            </div>
+            
+        </div>
+       
+        <div style="text-align: center;">
+
+                <a href='/certification'> <input type="button" value="return"> </a>
+        </div>
+    </body>
+</html>

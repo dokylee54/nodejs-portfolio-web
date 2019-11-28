@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>project</title> 
+        <script type="text/javascript" src="app.js"></script>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+            a { text-decoration:none } 
+         </style>
+    </head>
+    <body style="background-color: lightgray; margin:0;">
+            <div style=" background-color: #29487D; color:white; text-align: center;">
+                <br>
+                <h1>Project</h1>
+                <br>
+            </div>
+            <div>
+                <br><br>
+            </div>
+            <div style="background-color: white;  margin:30px; padding: 30px;">
+                    <div>
+                            <h1>Name of Project</h1>
+                            Press the project name to go to the detailed view.
+                            <br>
+                            <hr>
+                            <br><br>
+                            <% for (let i=0 ; i < posts.length ; i++) { %>
+                            <p> 
+                                <h3><b><a href='/project/<%= posts[i].seq %>'>> <%= JSON.stringify(posts[i].proj_name) %></a> </b></h3>      
+                            <br>
+                            <br>
+                            <%}%> 
+                        </div>
+            </div>
+        
+        <div style="text-align: center;">
+            <p>
+                <a href="/project/add"><input type="button" value="add"></a>
+                <a href='../main'> <input type="button" value="main"> </a>
+            </p>
+        </div>
+    </body>
+</html>

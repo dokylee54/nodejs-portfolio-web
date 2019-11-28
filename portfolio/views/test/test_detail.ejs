@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>test detail</title> 
+        <script type="text/javascript" src="app.js"></script>
+        <style type="text/css">
+            a:link { color:black; text-decoration: none;}
+            a:visited { color:black; text-decoration: none;}
+            a:hover { color:#29487D; text-decoration: underline;}
+            a { text-decoration:none } 
+         </style>
+    </head>
+    <body style="background-color: lightgray; margin: 0">
+        <div style=" background-color: #29487D; color:white; text-align: center;">
+            <br>
+            <h1>Edit Test</h1>
+            <br>
+        </div>
+        <div style="background-color: white;  margin:30px; padding: 30px;">
+            <div >
+                <h1>Test Detail</h1>
+                <hr>
+                <BR>
+            </div>
+            <div>
+                <p> 
+                    <h3> Name of Test</h3>
+                    <%= JSON.stringify(post.test_name) %><br><br>
+                    <h3> Score / Grade</h3>
+                    <%= JSON.stringify(post.score) %><br><br>
+                    <h3> Organizer</h3>
+                    <%= JSON.stringify(post.issuing_org) %><br><br>
+                    <h3> Issuing </h3>
+                    <%= JSON.stringify(post.issuing_date) %><br><br>
+                    <% if(post.expiration_date) { %>
+                    <h3> Expiration</h3>
+                    <%= JSON.stringify(post.expiration_date) %><br><br>
+                   <% } %>
+                </p>
+            </div>
+        </div>
+       
+        <div style="text-align: center;">
+            <a href='/test/ <%= post.seq %>/delete'> <input type="button" value="remove"> </a>
+            <a href='/test/<%= post.seq %>/edit'> <input type="button" value="edit"> </a>
+            <a href='../main'> <input type="button" value="main"> </a>
+        </div>
+    </body>
+</html>

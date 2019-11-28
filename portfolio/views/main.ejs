@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<style>
+    table {
+      width: 100%;
+      border: 1px solid #444444;
+    }
+    table {
+        background-color: #e8dcca;
+    }
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
+        <title>My Portfolio</title>      
+        <style type="text/css">
+            a:link { color:white; text-decoration: none;}
+            a:visited { color:white; text-decoration: none;}
+            a:hover { color: skyblue; text-decoration: underline;}
+        </style>
+
+    </head>
+    <body style="background-color: lightgray; margin:0;">
+
+        <div style="padding:10px; background-color: #29487D; color:white;">
+            <div style="text-align:center;" >
+                    <h1 style="font-size: 50px"><b>My Portfolio</b></h1>
+            </div>
+            <div style="text-align:center;">
+                <a href="/profile" style="text-decoration: none"> <b>profile</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/career" style="text-decoration: none"> <b>career</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/certification" style="text-decoration: none"> <b>certification</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/project" style="text-decoration: none"> <b>project</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/resume" style="text-decoration: none"> <b>resume</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/test" style="text-decoration: none"> <b>test</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <a href="/competition" style="text-decoration: none"> <b>competition</b> &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                <br>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div style="text-align: center;">
+                <form action="/main/search" method="POST" style="text-align: center;">
+                    <h1><b>Search</b><br></h1>
+                    <select name="searchBoard" style="height: 35px;"> 
+                        <option value=""> Category </option>
+
+                        <option value="career"> career </option>
+                        <option value="certifications"> certifications </option>
+                        <option value="projects"> projects </option>
+                        <option value="resume"> resume </option>
+                        <option value="tests"> tests </option>
+                        <option value="competitions"> competitions </option>
+                    </select>&nbsp; &nbsp;
+                    <input type="text" name="searchKey" placeholder="enter here" style="width: 700px;height: 30px;">&nbsp; &nbsp;
+                    <button type="submit" style="width: 70px; height: 35px; background-color: lightslategray;">SEARCH</button>
+                    <br><br>
+                    <hr>
+                </form>
+            </div>
+            <div style="text-align: center;">
+                    <div style="background-color:lightgray;  margin:30px; padding:30px;">
+                            <div style="display:inline-block; font-size:20px; margin:0 auto;">
+                                    <h2>Current Status</h2>
+                                    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse:collapse; width: 1000px; background-color: lightgrey;">
+                                        <tr>
+                                        <% for(var i =0; i < tables.length; i++){ %>
+                                            <td><%= tables[i] %></td> 
+                                        <% } %>
+                                        <td>awarded</td>
+                                        </tr>
+                                        <tr>
+                                        <% for(var i =0; i < counts.length; i++){ %>
+                                            <td><%= counts[i]['count'] %></td>
+                                        <% } %>
+                                        <td><%= (comp_counts.length==0) ? 0 : comp_counts[0]['sum'] %></td>
+                                        </tr> 
+                                    </table>
+                                    <br><br>
+                                </div>
+                    </div>
+
+                </div>
+            </div>
+
+        <div class="footer" style="text-align:center">
+            <hr><br><br>
+            <form action="/logout" method="GET" style ="text-align:center;">
+                <button type="submit">LOGOUT</button>        
+            </form>
+            <br><br>
+    </body>
+</html>
